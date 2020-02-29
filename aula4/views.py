@@ -4,4 +4,12 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, "aula4.html")
+    context = {
+        "alunos" : [
+            "joao",
+            "maria",
+            "jose",
+            "xitao"
+        ]
+        }
+    return render(request, "aula4/index.html", context=context)
